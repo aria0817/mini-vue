@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="app"></div>
 </body>
+
 </html>
 
+
 <script src="./reactive.js"></script>
+<script>
+    // 全量更新 搜索发生变化的dom 要实现定点更新
+    // 虚拟dom 把新旧vnode对比之后
+    function update() {
+        console.log('更新视图');
+        var app = document.getElementById('app')
+        app.innerHTML = obj.foo
+    }
+    // setInterval(() => {
+    //     update()
+    // }, 1000);
+</script>
 <!-- <script>
     // 1. 实现响应式 
 // // 数据劫持

@@ -10,7 +10,10 @@
 
 <body>
     <div id="app">
+        <img src="../src/assets/数据双向绑定眼里.png" alt="">
       <p>{{counter}}</p>
+      <p v-text="counter"></p>
+      <p v-html="desc"></p>
     </div>
 </body>
 
@@ -20,7 +23,8 @@
     const app = new MiniVue({
         el: '#app',
         data: {
-            counter: 1
+            counter: 1,
+            desc:'<span>困死了</span>'
         }
     })
 
